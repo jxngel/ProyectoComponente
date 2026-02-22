@@ -8,16 +8,16 @@ package gui;
  *
  * @author jesus
  */
-public class GUIConsultar extends javax.swing.JFrame {
+public class GUIAddActiveComponent extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIConsultar.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIAddActiveComponent.class.getName());
 
     /**
-     * Creates new form GUIConsultar
+     * Creates new form GUIAddActiveComponent
      */
-    public GUIConsultar() {
+    public GUIAddActiveComponent() {
         initComponents();
-        setTitle("Consultar Componente");
+        setTitle("Añadir Componente Activo");
         setLocationRelativeTo(null);
     }
 
@@ -68,7 +68,7 @@ public class GUIConsultar extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new GUIConsultar().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GUIAddActiveComponent().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

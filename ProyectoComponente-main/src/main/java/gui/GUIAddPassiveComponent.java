@@ -8,16 +8,16 @@ package gui;
  *
  * @author jesus
  */
-public class GUIEliminar extends javax.swing.JFrame {
+public class GUIAddPassiveComponent extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIEliminar.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIAddPassiveComponent.class.getName());
 
     /**
-     * Creates new form GUIEliminar
+     * Creates new form GUIAddPassiveComponent
      */
-    public GUIEliminar() {
+    public GUIAddPassiveComponent() {
         initComponents();
-        setTitle("Eliminar Componente");
+        setTitle("Añadir Componente Pasivo");
         setLocationRelativeTo(null);
     }
 
@@ -68,7 +68,7 @@ public class GUIEliminar extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new GUIEliminar().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GUIAddPassiveComponent().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

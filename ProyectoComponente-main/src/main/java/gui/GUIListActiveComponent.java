@@ -8,16 +8,16 @@ package gui;
  *
  * @author jesus
  */
-public class GUIAdicionar extends javax.swing.JFrame {
+public class GUIListActiveComponent extends javax.swing.JFrame {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIAdicionar.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUIListActiveComponent.class.getName());
 
     /**
-     * Creates new form GUIAdicionar
+     * Creates new form GUIListActiveComponent
      */
-    public GUIAdicionar() {
+    public GUIListActiveComponent() {
         initComponents();
-        setTitle("Adicionar Componente");
+        setTitle("Listar Componentes Activos");
         setLocationRelativeTo(null);
     }
 
@@ -68,7 +68,7 @@ public class GUIAdicionar extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new GUIAdicionar().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GUIListActiveComponent().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
