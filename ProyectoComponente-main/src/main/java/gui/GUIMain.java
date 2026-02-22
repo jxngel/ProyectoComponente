@@ -23,6 +23,36 @@ public class GUIMain extends javax.swing.JFrame {
         configureMenu();
         setTitle("Electronic Components Project");
         setLocationRelativeTo(null);
+        setSize(600, 400);
+        addMainPanel();
+    }
+
+    private void addMainPanel() {
+        javax.swing.JPanel mainPanel = new javax.swing.JPanel();
+        mainPanel.setBackground(new java.awt.Color(240, 248, 255));
+        mainPanel.setLayout(new javax.swing.BoxLayout(mainPanel, javax.swing.BoxLayout.Y_AXIS));
+        
+        javax.swing.JLabel titleLabel = new javax.swing.JLabel("Electronic Components Project");
+        titleLabel.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 24));
+        titleLabel.setAlignmentX(javax.swing.JComponent.CENTER_ALIGNMENT);
+        
+        javax.swing.JLabel versionLabel = new javax.swing.JLabel("Version 1.0");
+        versionLabel.setFont(new java.awt.Font("Arial", java.awt.Font.PLAIN, 14));
+        versionLabel.setAlignmentX(javax.swing.JComponent.CENTER_ALIGNMENT);
+        
+        javax.swing.JLabel teamLabel = new javax.swing.JLabel("Team: Juan Bocanegra, David Pérez, Daniel Hoyos");
+        teamLabel.setFont(new java.awt.Font("Arial", java.awt.Font.PLAIN, 12));
+        teamLabel.setAlignmentX(javax.swing.JComponent.CENTER_ALIGNMENT);
+        
+        mainPanel.add(javax.swing.Box.createVerticalStrut(40));
+        mainPanel.add(titleLabel);
+        mainPanel.add(javax.swing.Box.createVerticalStrut(10));
+        mainPanel.add(versionLabel);
+        mainPanel.add(javax.swing.Box.createVerticalStrut(20));
+        mainPanel.add(teamLabel);
+        mainPanel.add(javax.swing.Box.createVerticalGlue());
+        
+        getContentPane().add(mainPanel);
     }
 
     private void configureMenu() {
@@ -73,15 +103,7 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void openSearchPassiveComponent() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente pasivo:", "Buscar Componente Pasivo", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        new GUISearchPassiveComponent(id).setVisible(true);
+        new GUISearchPassiveComponent("").setVisible(true);
     }
 
     private void openListPassiveComponent() {
@@ -89,29 +111,21 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void calculatePassiveImpedance() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente pasivo:", "Calcular Impedancia", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        // TODO: Implementar lógica de cálculo de impedancia
-        javax.swing.JOptionPane.showMessageDialog(this, "Impedancia calculada para el ID: " + id, "Resultado", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente pasivo:",
+            "Calcular Impedancia",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
     }
 
     private void calculatePassivePower() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente pasivo:", "Calcular Potencia", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        // TODO: Implementar lógica de cálculo de potencia
-        javax.swing.JOptionPane.showMessageDialog(this, "Potencia calculada para el ID: " + id, "Resultado", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente pasivo:",
+            "Calcular Potencia",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
     }
 
     // ======================== Active Component Methods ========================
@@ -120,15 +134,7 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void openSearchActiveComponent() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente activo:", "Buscar Componente Activo", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        new GUISearchActiveComponent(id).setVisible(true);
+        new GUISearchActiveComponent("").setVisible(true);
     }
 
     private void openListActiveComponent() {
@@ -136,29 +142,21 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void calculateActiveImpedance() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente activo:", "Calcular Impedancia", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        // TODO: Implementar lógica de cálculo de impedancia
-        javax.swing.JOptionPane.showMessageDialog(this, "Impedancia calculada para el ID: " + id, "Resultado", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente activo:",
+            "Calcular Impedancia",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
     }
 
     private void calculateActivePower() {
-        String id = javax.swing.JOptionPane.showInputDialog(this, "Ingrese el ID del componente activo:", "Calcular Potencia", javax.swing.JOptionPane.QUESTION_MESSAGE);
-        if (id == null || id.trim().isEmpty()) {
-            return;
-        }
-        if (!isValidId(id)) {
-            javax.swing.JOptionPane.showMessageDialog(this, "ID inválido. Debe ser un número mayor a 0.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        // TODO: Implementar lógica de cálculo de potencia
-        javax.swing.JOptionPane.showMessageDialog(this, "Potencia calculada para el ID: " + id, "Resultado", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente activo:",
+            "Calcular Potencia",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
     }
 
     // ======================== Utility Methods ========================
@@ -173,9 +171,14 @@ public class GUIMain extends javax.swing.JFrame {
 
     private void showAboutDialog() {
         String message = PROJECT_NAME
-                + "\nVersion: " + PROJECT_VERSION
-                + "\nIntegrantes: " + TEAM_NAMES;
-        javax.swing.JOptionPane.showMessageDialog(this, message, "Acerca de...", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            + "\nVersion: " + PROJECT_VERSION
+            + "\nIntegrantes: " + TEAM_NAMES;
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            message,
+            "Acerca de...",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
     /**
@@ -183,7 +186,6 @@ public class GUIMain extends javax.swing.JFrame {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
