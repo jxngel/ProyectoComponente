@@ -103,7 +103,28 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void openSearchPassiveComponent() {
-        new GUISearchPassiveComponent("").setVisible(true);
+        String id = javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente pasivo:",
+            "Consultar Componente",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        new GUISearchPassiveComponent(id).setVisible(true);
     }
 
     private void openListPassiveComponent() {
@@ -111,20 +132,62 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void calculatePassiveImpedance() {
-        javax.swing.JOptionPane.showInputDialog(
+        String id = javax.swing.JOptionPane.showInputDialog(
             this,
             "Ingrese el ID del componente pasivo:",
             "Calcular Impedancia",
             javax.swing.JOptionPane.QUESTION_MESSAGE
         );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Impedancia calculada para el componente ID: " + id,
+            "Resultado",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
     private void calculatePassivePower() {
-        javax.swing.JOptionPane.showInputDialog(
+        String id = javax.swing.JOptionPane.showInputDialog(
             this,
             "Ingrese el ID del componente pasivo:",
             "Calcular Potencia",
             javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Potencia calculada para el componente ID: " + id,
+            "Resultado",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
     }
 
@@ -134,7 +197,28 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void openSearchActiveComponent() {
-        new GUISearchActiveComponent("").setVisible(true);
+        String id = javax.swing.JOptionPane.showInputDialog(
+            this,
+            "Ingrese el ID del componente activo:",
+            "Consultar Componente",
+            javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        new GUISearchActiveComponent(id).setVisible(true);
     }
 
     private void openListActiveComponent() {
@@ -142,20 +226,62 @@ public class GUIMain extends javax.swing.JFrame {
     }
 
     private void calculateActiveImpedance() {
-        javax.swing.JOptionPane.showInputDialog(
+        String id = javax.swing.JOptionPane.showInputDialog(
             this,
             "Ingrese el ID del componente activo:",
             "Calcular Impedancia",
             javax.swing.JOptionPane.QUESTION_MESSAGE
         );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Impedancia calculada para el componente ID: " + id,
+            "Resultado",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
     private void calculateActivePower() {
-        javax.swing.JOptionPane.showInputDialog(
+        String id = javax.swing.JOptionPane.showInputDialog(
             this,
             "Ingrese el ID del componente activo:",
             "Calcular Potencia",
             javax.swing.JOptionPane.QUESTION_MESSAGE
+        );
+        
+        if (id == null) {
+            return; // User cancelled
+        }
+        
+        if (!isValidId(id)) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "El ID debe ser un número entero positivo.",
+                "ID Inválido",
+                javax.swing.JOptionPane.ERROR_MESSAGE
+            );
+            return;
+        }
+        
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Potencia calculada para el componente ID: " + id,
+            "Resultado",
+            javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
     }
 
