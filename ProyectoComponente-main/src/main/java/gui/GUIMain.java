@@ -4,6 +4,8 @@
  */
 package gui;
 
+import com.mycompany.electroniccomponentsproject.service.ElectronicComponentService;
+
 /**
  *
  * @author jesus
@@ -153,9 +155,12 @@ public class GUIMain extends javax.swing.JFrame {
             return;
         }
         
+        int intId = Integer.parseInt(id);
+        double impedance = ElectronicComponentService.calculateImpedanceById(intId);
+        
         javax.swing.JOptionPane.showMessageDialog(
             this,
-            "Impedancia calculada para el componente ID: " + id,
+            "Impedancia calculada para el componente ID: " + id + " = " + impedance + " Ohms",
             "Resultado",
             javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
@@ -183,9 +188,12 @@ public class GUIMain extends javax.swing.JFrame {
             return;
         }
         
+        int intId = Integer.parseInt(id);
+        double power = ElectronicComponentService.calculatePowerById(intId);
+        
         javax.swing.JOptionPane.showMessageDialog(
             this,
-            "Potencia calculada para el componente ID: " + id,
+            "Potencia calculada para el componente ID:" + id + " = " + power + " Watts",
             "Resultado",
             javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
@@ -247,9 +255,12 @@ public class GUIMain extends javax.swing.JFrame {
             return;
         }
         
+        int intId = Integer.parseInt(id);
+        double impedance = ElectronicComponentService.calculateImpedanceById(intId);
+        
         javax.swing.JOptionPane.showMessageDialog(
             this,
-            "Impedancia calculada para el componente ID: " + id,
+            "Impedancia calculada para el componente ID: " + id + " = " + impedance + " Ohms",
             "Resultado",
             javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
@@ -277,9 +288,12 @@ public class GUIMain extends javax.swing.JFrame {
             return;
         }
         
+        int intId = Integer.parseInt(id);
+        double power = ElectronicComponentService.calculatePowerById(intId);
+        
         javax.swing.JOptionPane.showMessageDialog(
             this,
-            "Potencia calculada para el componente ID: " + id,
+            "Potencia calculada para el componente ID:" + id + " = " + power + " Watts",
             "Resultado",
             javax.swing.JOptionPane.INFORMATION_MESSAGE
         );
